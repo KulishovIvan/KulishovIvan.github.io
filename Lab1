@@ -1,0 +1,36 @@
+!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="generator" content="WYSIWYG Web Builder 14 - http://www.wysiwygwebbuilder.com">
+<link href="Untitled1.css" rel="stylesheet">
+<link href="index.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+   integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+   crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+   integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+   crossorigin=""></script>
+</head>
+<body>
+<!-- Карта -->
+<div id="map" style="position:absolute;left:35px;top:21px;width:1111px;height:598px;z-index:0">
+</div>
+<!-- Отображение -->
+<script>
+var mapOptions = {
+   center: [54.53, 36.26],
+   zoom: 10
+   }
+var map = new L.map('map', mapOptions);
+
+var marker = new L.Marker(new L.LatLng(54.53, 36.26));
+map.addLayer(marker);
+var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+
+map.addLayer(layer);
+</script>
+
+</body>
+</html>
